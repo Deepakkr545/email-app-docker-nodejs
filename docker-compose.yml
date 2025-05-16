@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  email-app:
+    image: email-submit:01
+    container_name: myapp
+    ports:
+      - "3000:3000"
+    volumes:
+      - "D:/VS Code/email-app-docker/email.txt:/server/email.txt"
+    restart: unless-stopped
